@@ -19,6 +19,7 @@
 /* Begin PBXFileReference section */
 		35B5028E67E783A34D9D7293 /* Pods-pushmynotifs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pushmynotifs.release.xcconfig"; path = "Pods/Target Support Files/Pods-pushmynotifs/Pods-pushmynotifs.release.xcconfig"; sourceTree = "<group>"; };
 		374DCE187625A25378F186DA /* Pods_pushmynotifs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pushmynotifs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E46A4ED1D6D175200447647 /* pushmynotifs.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = pushmynotifs.entitlements; sourceTree = "<group>"; };
 		3EAE18B21D6CCE3D008702BC /* pushmynotifs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pushmynotifs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EAE18B51D6CCE3D008702BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3EAE18B71D6CCE3D008702BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +73,7 @@
 		3EAE18B41D6CCE3D008702BC /* pushmynotifs */ = {
 			isa = PBXGroup;
 			children = (
+				3E46A4ED1D6D175200447647 /* pushmynotifs.entitlements */,
 				3EAE18B51D6CCE3D008702BC /* AppDelegate.swift */,
 				3EAE18B71D6CCE3D008702BC /* ViewController.swift */,
 				3EAE18B91D6CCE3D008702BC /* Main.storyboard */,
@@ -128,6 +130,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = WWK47579VD;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -341,6 +348,7 @@
 			baseConfigurationReference = 68D3FA8EAAE57A0974CD1BEB /* Pods-pushmynotifs.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = pushmynotifs/pushmynotifs.entitlements;
 				DEVELOPMENT_TEAM = WWK47579VD;
 				INFOPLIST_FILE = pushmynotifs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -355,6 +363,7 @@
 			baseConfigurationReference = 35B5028E67E783A34D9D7293 /* Pods-pushmynotifs.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = pushmynotifs/pushmynotifs.entitlements;
 				DEVELOPMENT_TEAM = WWK47579VD;
 				INFOPLIST_FILE = pushmynotifs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
